@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Telemedicine Platform</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+<body>
+    <!-- Header with Navigation -->
+    <header>
+        <h1>HealthConnect</h1>
+        <h3>Did you know that 60% of people in rural areas don’t</h3>
+        <h3>have easy access to basic healthcare services?</h3>
+        <nav>
+            <ul>
+                <b><a href="#about">About</a></b>|
+                <b><a href="#Solutions">Solutions</a></b>|
+                <b><a href="#Products">Products</a></b>|
+                <b><a href="#Market Size">Market Size</a></b>|
+                <b><a href="#admin">Admin</a></b> |
+                <b><a href="#Contact.html">Contact</a></b>
+            </ul>
+        </nav>
+    </header>
+
+
+    <div class="section-container">
+        <section id="about" class="section">
+            <h1>About Us</h1>
+            <p>Our Telemedicine platform allows you to connect with healthcare providers from the comfort of your home. You can register as a new patient, book appointments, and reschedule as needed, making healthcare more accessible and convenient for you.</p>
+            
+            <!-- Image Section for Doctors, Mobile Phones, and Rural Access -->
+            <div class="image-grid">
+                <!-- Image of Doctor -->
+                <div class="image-item"> 
+                    <img src="images/doctor.jpg" alt="Doctor">
+                    <p>Professional healthcare providers available anytime, anywhere.</p>
+                </div>
+                
+                <!-- Image of Mobile Phone -->
+                <div class="image-item">
+                    <img src="images/phone.jpg" alt="Mobile Phone Access">
+                    <p>Easy access to HealthConnect via mobile devices.</p>
+                </div>
+                
+                <!-- Image of Rural Community Member using Phone -->
+                <div class="image-item">
+                    <img src="images/rural-community.jpg" alt="Rural Community Using Phone">
+                    <p>Bringing healthcare to underserved areas through mobile connectivity.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+    
+    
+        <section id="Solutions" class="section">
+            <h2>Solutions</h2>
+            <ul>
+                <li>Book appointments and speak with doctors from the comfort of their homes.</li>
+                <li>Access consultations via multiple channels, including USSD, SMS, or online, allowing flexibility no matter where you are.</li>
+                <li>Receive electronic prescriptions directly on their devices, streamlining the treatment process.</li>
+                <li>Benefit from follow-up care without the need for physical visits, ensuring continuous health support.</li>
+            </ul>
+            <p>Our goal is to make healthcare accessible, reliable, and convenient for everyone.</p>
+        </section>
+    
+        <section id="Products" class="section">
+            <h2>Products</h2>
+            <ul>
+                <li>24/7 availability, tailored scheduling for both patients and doctors, and secure data encryption that keeps patient information safe.</li>
+                <li>HealthConnect focuses specifically on underserved regions, using a low-bandwidth mode to ensure smooth consultations even in areas with limited internet access.</li>
+                <li>Patients can also access their health records anytime, providing continuous care even after consultations.</li>
+            </ul>
+        </section>
+    
+        <section id="market-size" class="section">
+            <h2>HealthConnect Market Size in Kenya</h2>
+            <p>The market size for HealthConnect in Kenya includes the following key demographics and technology access rates:</p>
+            <table id="marketTable">
+                <thead>
+                    <tr>
+                        <th>Segment</th>
+                        <th>Percentage (%)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Urban Population</td>
+                        <td>30</td>
+                    </tr>
+                    <tr>
+                        <td>Rural Population</td>
+                        <td>70</td>
+                    </tr>
+                    <tr>
+                        <td>Smartphone Users</td>
+                        <td>40</td>
+                    </tr>
+                    <tr>
+                        <td>Non-Smartphone Users</td>
+                        <td>60</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </div>
+    
+    <!-- Contact Options with Hover Interactions -->
+        <!-- Patient Registration Form -->
+        <section class="section-container">
+            <!-- Patient Registration Form -->
+            <div class="card">
+                <h2>Patient Information Registration</h2>
+                <form id="patientForm" onsubmit="recordPatient(event)">
+                    <div class="form-group">
+                        <label for="patient-name">Patient's Name:</label>
+                        <input type="text" id="patient-name" name="patientName" placeholder="Enter patient's name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="age">Age:</label>
+                        <input type="text" id="age" name="age" placeholder="Enter patient's age" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="gender">Gender:</label>
+                        <select id="gender" name="gender" required>
+                            <option value="" disabled selected>Select gender</option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="contact">Contact:</label>
+                        <input type="tel" id="contact" name="contact" placeholder="Enter contact number" required>
+                    </div>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        
+            <!-- Doctor Registration Form -->
+            <div class="card">
+                <h2>Doctor Information Registration</h2>
+                <form id="doctorForm" onsubmit="recordDoctor(event)">
+                    <div class="form-group">
+                        <label for="doctor-name">Doctor's Name:</label>
+                        <input type="text" id="doctor-name" name="doctorName" placeholder="Enter doctor's name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="specialization">Specialization:</label>
+                        <input type="text" id="specialization" name="specialization" placeholder="Enter specialization" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="doctor-email">Email:</label>
+                        <input type="email" id="doctor-email" name="email" placeholder="Enter email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="doctor-phone">Phone Number:</label>
+                        <input type="tel" id="doctor-phone" name="phone" placeholder="Enter phone number" required>
+                    </div>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        
+            <!-- Appointment Registration Form -->
+            <div class="card">
+                <h2>Appointment Information Registration</h2>
+                <form id="appointmentForm" onsubmit="recordAppointment(event)">
+                    <div class="form-group">
+                        <label for="appointment-date">Appointment Date:</label>
+                        <input type="date" id="appointment-date" name="appointmentDate" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="appointment-time">Appointment Time:</label>
+                        <input type="time" id="appointment-time" name="appointmentTime" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="reason">Reason for Appointment:</label>
+                        <textarea id="reason" name="reason" rows="4" placeholder="Enter reason for appointment" required></textarea>
+                    </div>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </section>
+        
+
+
+    <!-- Patient Registration Form -->
+<form id="patientForm" action="http://localhost:3001/api/patient" method="POST">
+    <!-- form fields here -->
+</form>
+
+<!-- Doctor Registration Form -->
+<form id="doctorForm" action="http://localhost:3001/api/doctor" method="POST">
+    <!-- form fields here -->
+</form>
+
+<!-- Appointment Registration Form -->
+<form id="appointmentForm" action="http://localhost:3001/api/appointment" method="POST">
+    <!-- form fields here -->
+</form>
+
+<!-- Admin Section -->
+<section id="admin" class="section">
+    <h2>Admin Dashboard</h2>
+    
+    <!-- Admin Login -->
+    <div class="admin-login">
+        <h3>Admin Login</h3>
+        <form id="adminLoginForm" onsubmit="adminLogin(event)">
+            <div class="form-group">
+                <label for="admin-username">Username:</label>
+                <input type="text" id="admin-username" name="username" placeholder="Enter username" required>
+            </div>
+            <div class="form-group">
+                <label for="admin-password">Password:</label>
+                <input type="password" id="admin-password" name="password" placeholder="Enter password" required>
+            </div>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+
+    <!-- Admin Actions -->
+    <div id="adminDashboard" class="hidden">
+        <h3>Welcome, Admin</h3>
+        <div class="admin-actions">
+            <div class="action-item" onclick="viewPatients()">View Registered Patients</div>
+            <div class="action-item" onclick="viewDoctors()">View Registered Doctors</div>
+            <div class="action-item" onclick="viewAppointments()">View Appointments</div>
+        </div>
+
+        <div id="adminRecords">
+            <!-- Dynamic content will be loaded here -->
+        </div>
+    </div>
+</section>
+
+
+    <script>
+
+           
+
+        // Arrays to store registered patients, doctors, and appointments
+        const registeredPatients = [];
+        const registeredDoctors = [];
+        const registeredAppointments = [];
+
+        function login(event) {
+            event.preventDefault();
+
+            const enteredUsername = document.getElementById('username').value;
+            const enteredPassword = document.getElementById('password').value;
+
+            if (enteredUsername === credentials.username && enteredPassword === credentials.password) {
+                alert("Login successful!");
+                document.getElementById("loginForm").reset();
+            } else {
+                alert("Invalid username or password.");
+            }
+        }
+
+        function recordPatient(event) {
+            event.preventDefault();
+
+            const patientName = document.getElementById('patient-name').value;
+            const contact = document.getElementById('contact').value;
+
+            const isDuplicate = registeredPatients.some(patient => 
+                patient.name === patientName && patient.contact === contact
+            );
+
+            if (isDuplicate) {
+                alert("This patient is already registered.");
+                return;
+            }
+
+            const age = document.getElementById('age').value;
+            const gender = document.getElementById('gender').value;
+
+            const patientData = { name: patientName, age, gender, contact };
+            registeredPatients.push(patientData);
+
+            console.log("Patient Registered:", patientData);
+            document.getElementById("patientForm").reset();
+            alert("Patient information has been recorded.");
+        }
+
+        function recordDoctor(event) {
+            event.preventDefault();
+
+            const doctorName = document.getElementById('doctor-name').value;
+            const phone = document.getElementById('doctor-phone').value;
+
+            const isDuplicate = registeredDoctors.some(doctor => 
+                doctor.name === doctorName && doctor.phone === phone
+            );
+
+            if (isDuplicate) {
+                alert("This doctor is already registered.");
+                return;
+            }
+
+            const specialization = document.getElementById('specialization').value;
+            const email = document.getElementById('doctor-email').value;
+
+            const doctorData = { name: doctorName, specialization, email, phone };
+            registeredDoctors.push(doctorData);
+
+            console.log("Doctor Registered:", doctorData);
+            document.getElementById("doctorForm").reset();
+            alert("Doctor information has been recorded.");
+        }
+
+        function recordAppointment(event) {
+            event.preventDefault();
+
+            const appointmentDate = document.getElementById('appointment-date').value;
+            const appointmentTime = document.getElementById('appointment-time').value;
+
+            const isDuplicate = registeredAppointments.some(appointment => 
+                appointment.date === appointmentDate && appointment.time === appointmentTime
+            );
+
+            if (isDuplicate) {
+                alert("This appointment slot is already booked.");
+                return;
+            }
+
+            const reason = document.getElementById('reason').value;
+
+            const appointmentData = { date: appointmentDate, time: appointmentTime, reason };
+            registeredAppointments.push(appointmentData);
+
+            console.log("Appointment Registered:", appointmentData);
+            document.getElementById("appointmentForm").reset();
+            alert("Appointment has been recorded.");
+        }
+
+        // Sample admin credentials
+        const adminCredentials = { username: "admin", password: "1234" };
+
+        // Admin login functionality
+        function adminLogin(event) {
+            event.preventDefault();
+            const username = document.getElementById("admin-username").value;
+            const password = document.getElementById("admin-password").value;
+
+            if (username === adminCredentials.username && password === adminCredentials.password) {
+                alert("Admin Login Successful");
+                document.getElementById("adminLoginForm").classList.add("hidden");
+                document.getElementById("adminDashboard").classList.remove("hidden");
+            } else {
+                alert("Invalid Admin Credentials");
+            }
+        }
+
+        // View functions for admin
+        function viewPatients() {
+            const patientRecords = registeredPatients.map(patient => `
+                <p>${patient.name}, Age: ${patient.age}, Contact: ${patient.contact}</p>
+            `).join("");
+            document.getElementById("adminRecords").innerHTML = `<h4>Registered Patients</h4>${patientRecords}`;
+        }
+
+        function viewDoctors() {
+            const doctorRecords = registeredDoctors.map(doctor => `
+                <p>${doctor.name}, Specialization: ${doctor.specialization}, Phone: ${doctor.phone}</p>
+            `).join("");
+            document.getElementById("adminRecords").innerHTML = `<h4>Registered Doctors</h4>${doctorRecords}`;
+        }
+
+        function viewAppointments() {
+            const appointmentRecords = registeredAppointments.map(appointment => `
+                <p>Date: ${appointment.date}, Time: ${appointment.time}, Reason: ${appointment.reason}</p>
+            `).join("");
+            document.getElementById("adminRecords").innerHTML = `<h4>Appointments</h4>${appointmentRecords}`;
+        }
+
+    </script>
+
+    <!-- Footer -->
+    <footer>
+
+        <p>Contact us at: healthconnect@gmail.com for assistance</p>
+        <p>Follow Us:</p>
+        
+        <div class="social-media">
+            <a href="https://www.facebook.com" target="_blank" aria-label="Facebook">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://www.instagram.com" target="_blank" aria-label="Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.twitter.com" target="_blank" aria-label="X (formerly Twitter)">
+                <span style="font-weight: bold; font-size: 1.2em;">X</span>
+            </a>
+            
+            </a>
+        </div>
+        <p>&copy; 2024 HealthConnect Platform. All rights reserved.</p>
+    </footer>
+</body>
+</html>
