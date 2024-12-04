@@ -1,4 +1,4 @@
-# HealthConnect
+# HealthConnect 🌐
 HealthConnect is a comprehensive healthcare management solution that connects patients, providers, and medical services in one secure and user-friendly platform.
 
 Features 🚀
